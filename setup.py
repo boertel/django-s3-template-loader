@@ -21,7 +21,7 @@ setup(
     url="https://boertel.github.io/django-s3-template-loader",
     license="BSD-3-Clause",
     include_package_data=True,
-    packages=['s3_template_loader', 's3_template_loader.views', 's3_template_loader.loaders'],
+    packages=['s3_template_loader'],
     install_requires=[
         "Django>=3.0",
     ],
