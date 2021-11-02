@@ -1,3 +1,5 @@
+__all__ = ['get_template_engine']
+
 def get_template_engine():
   return {
       "BACKEND": "django.template.backends.django.DjangoTemplates",
