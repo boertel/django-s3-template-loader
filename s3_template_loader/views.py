@@ -3,6 +3,8 @@ from django.http import JsonResponse, HttpResponseNotAllowed
 from django.conf import settings
 from django.template.loader import template_source_loaders
 
+__all__ = ['index', 'version', 'clear_template_cache']
+
 
 def index(request):
     directory = settings.S3_TEMPLATE_LOADER_BUILD_DIRECTORY
