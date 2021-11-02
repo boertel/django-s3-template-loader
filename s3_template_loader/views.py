@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse, HttpResponseNotAllowed
+from django.http import JsonResponse, HttpResponseNotAllowed, HttpResponse
 from django.conf import settings
 from django.template.utils import get_app_template_dirs
 from django.views.decorators.csrf import csrf_exempt
