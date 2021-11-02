@@ -10,7 +10,7 @@ def get_template_engine():
           "loaders": [
               (
                   "django.template.loaders.cached.Loader",
-                  ["s3_template_loaders.loaders.S3TemplateLoader"],
+                  ["s3_template_loader.loaders.S3TemplateLoader"],
               )
           ],
           "context_processors": [
