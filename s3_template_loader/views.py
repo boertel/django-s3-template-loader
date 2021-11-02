@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponseNotAllowed
 from django.conf import settings
-from django.template.loader import template_source_loaders
+from django.template.utils import get_app_template_dirs
 
 __all__ = ['index', 'version', 'clear_template_cache']
 
@@ -16,9 +16,5 @@ def version(request):
 def clear_template_cache(request):
     if request.method != 'DELETE':
         return HttpResponseNotAllowed()
-    if not template_source_loaders:
-        return
-
-    for loader in template_source_loaders:
-        loader.reset()
+    get_app_template_dirs.cache_clear()
     return HttpResponse(status=204)
