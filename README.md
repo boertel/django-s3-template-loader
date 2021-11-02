@@ -2,6 +2,13 @@
 
 ## Install
 
+with pipenv:
+```bash
+pipenv install "git+https://github.com/boertel/django-s3-template-loader/#egg=s3_template_loader"
+```
+
+## Configure
+
 1. Add the app to your `INSTALLED_APPS`
 
 ```python
@@ -12,12 +19,12 @@ INSTALLED_APPS = [
 ]
 ```
 
-2. Add the template loader definitioin to `TEMPLATES`
+2. Add the template engine definition to `TEMPLATES`
 
 ```python
 TEMPLATES = [
   { ... },
-  s3_template_loader.TEMPLATE
+  s3_template_loader.get_template_engine()
  
 ]
 ```
