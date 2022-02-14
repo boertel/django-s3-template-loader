@@ -34,3 +34,7 @@ TEMPLATES = [
 ```python
 S3_TEMPLATE_LOADER_BUILD_DIRECTORY = os.getenv("COMMIT", default="build")
 ```
+
+
+Notes:
+- your static files need to be hosted in `s3://<bucket name>/builds/{COMMIT}/index.html`
